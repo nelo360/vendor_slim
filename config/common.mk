@@ -95,8 +95,6 @@ PRODUCT_PACKAGES += \
     Apollo \
     BluetoothExt \
     LockClock \
-    ScreenRecorder \
-    libscreenrecorder \
     SoundRecorder
 
 # Extra tools
