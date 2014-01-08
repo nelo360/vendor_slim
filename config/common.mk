@@ -60,7 +60,8 @@ PRODUCT_COPY_FILES += \
 
 # Workaround for NovaLauncher zipalign fails
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk
+    vendor/slim/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk \
+    vendor/slim/prebuilt/common/app/ESFileManager.apk:system/app/ESFileManager.apk
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
@@ -90,12 +91,13 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
-    SlimCenter \
-    SlimFileManager \
     LatinIME \
-    SlimIRC \
+    Apollo \
     BluetoothExt \
-    DashClock
+    LockClock \
+    ScreenRecorder \
+    libscreenrecorder \
+    SoundRecorder
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -145,7 +147,7 @@ endif
 # KitKat SlimKat beta releases
 PRODUCT_VERSION_MAJOR = 4.4.2
 PRODUCT_VERSION_MINOR = beta
-PRODUCT_VERSION_MAINTENANCE = 2
+PRODUCT_VERSION_MAINTENANCE = 2.1
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
@@ -156,8 +158,8 @@ ifndef SLIM_BUILD_TYPE
 endif
 
 # Set all versions
-SLIM_VERSION := Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(SLIM_BUILD_TYPE)$(SLIM_POSTFIX)
-SLIM_MOD_VERSION := Slim-$(SLIM_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(SLIM_BUILD_TYPE)$(SLIM_POSTFIX)
+SLIM_VERSION := SuperOSR-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(SLIM_POSTFIX)
+SLIM_MOD_VERSION := SuperOSR-$(SLIM_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(SLIM_POSTFIX)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
