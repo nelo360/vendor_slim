@@ -145,8 +145,8 @@ if [ "$DEVICELCD" = "240" ]; then
    sed -i 's/ro.sf.lcd_density=240/ro.sf.lcd_density=182/g' $OUT/system/build.prop
 elif [ "$DEVICELCD" = "480" ]; then
     sed -i 's/ro.sf.lcd_density=480/ro.sf.lcd_density=370/g' $OUT/system/build.prop
-elif [ "$DEVICELCD" = "213" ]; then
-    sed -i 's/ro.sf.lcd_density=213/ro.sf.lcd_density=182/g' $OUT/system/build.prop
+#elif [ "$DEVICELCD" = "213" ]; then
+    #sed -i 's/ro.sf.lcd_density=213/ro.sf.lcd_density=182/g' $OUT/system/build.prop
 fi
 
 # Fix LCD Density for GNote
