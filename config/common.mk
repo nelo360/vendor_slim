@@ -87,7 +87,8 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Apollo \
     BluetoothExt \
-    LockClock \
+    DashClock \
+    PerformanceControl \
     ScreenRecorder \
     libscreenrecorder
 
