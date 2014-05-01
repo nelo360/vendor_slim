@@ -100,6 +100,9 @@ PRODUCT_PACKAGES += \
     mke2fs \
     tune2fs
 
+# T-Mobile theme engine
+include vendor/slim/config/themes_common.mk
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
