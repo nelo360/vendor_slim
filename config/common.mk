@@ -113,6 +113,13 @@ PRODUCT_PACKAGES += \
 # T-Mobile theme engine
 include vendor/slim/config/themes_common.mk
 
+# Stagefright FFMPEG plugin
+PRODUCT_PACKAGES += \
+    libstagefright_soft_ffmpegadec \
+    libstagefright_soft_ffmpegvdec \
+    libFFmpegExtractor \
+    libnamparser
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
