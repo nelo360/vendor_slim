@@ -162,10 +162,11 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Versioning System
-# KitKat SlimKat reopen code
-PRODUCT_VERSION_MAJOR = 4.4.3
+# KitKat SlimKat freeze code
+PRODUCT_VERSION_MAJOR = 4.4.4
 PRODUCT_VERSION_MINOR = build
-PRODUCT_VERSION_MAINTENANCE = 1.0
+PRODUCT_VERSION_MAINTENANCE = 5.95
+
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
@@ -173,6 +174,16 @@ ifndef SLIM_BUILD_TYPE
     SLIM_BUILD_TYPE := UNOFFICIAL
     PLATFORM_VERSION_CODENAME := UNOFFICIAL
     SLIM_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+endif
+
+# SlimIRC
+# export INCLUDE_SLIMIRC=1 for unofficial builds
+ifneq ($(filter WEEKLY OFFICIAL,$(SLIM_BUILD_TYPE)),)
+    INCLUDE_SLIMIRC = 1
+endif
+
+ifneq ($(INCLUDE_SLIMIRC),)
+    PRODUCT_PACKAGES += SlimIRC
 endif
 
 # Set all versions
@@ -183,5 +194,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     slim.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.slim.version=$(SLIM_VERSION) \
-    ro.modversion=$(SLIM_MOD_VERSION)
+    ro.modversion=$(SLIM_MOD_VERSION) \
+    ro.slim.buildtype=$(SLIM_BUILD_TYPE)
 
