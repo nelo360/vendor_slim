@@ -88,6 +88,11 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhaseBeam
 
+# HFM Files
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+    vendor/slim/prebuilt/etc/hosts.og:system/etc/hosts.og
+
 # DSPManager
 PRODUCT_PACKAGES += \
     DSPManager \
