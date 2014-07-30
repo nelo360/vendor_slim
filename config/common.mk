@@ -93,6 +93,11 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
     vendor/slim/prebuilt/etc/hosts.og:system/etc/hosts.og
 
+# CM Hardware Abstraction Framework
+    PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
+
 # DSPManager
 PRODUCT_PACKAGES += \
     DSPManager \
