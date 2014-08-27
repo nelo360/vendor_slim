@@ -5,3 +5,4 @@ add_lunch_combo slim_i9100-userdebug
 add_lunch_combo slim_i9300-userdebug
 add_lunch_combo slim_jflte-userdebug
 add_lunch_combo slim_mako-userdebug
+add_lunch_combo slim_sirius-userdebug
