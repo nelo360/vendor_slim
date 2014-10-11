@@ -65,7 +65,8 @@ PRODUCT_COPY_FILES += \
 # Workaround for NovaLauncher zipalign fails
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk \
-    vendor/slim/prebuilt/common/app/ESFileManager.apk:system/app/ESFileManager.apk
+    vendor/slim/prebuilt/common/app/ESFileManager.apk:system/app/ESFileManager.apk \
+    vendor/slim/prebuilt/common/app/SoundSearch.apk:system/app/SoundSearch.apk
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
@@ -92,6 +93,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
     vendor/slim/prebuilt/etc/hosts.og:system/etc/hosts.og
+
+# CM Hardware Abstraction Framework
+    PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
 
 # DSPManager
 PRODUCT_PACKAGES += \
@@ -170,7 +176,7 @@ endif
 # KitKat SlimKat freeze code
 PRODUCT_VERSION_MAJOR = 4.4.4
 PRODUCT_VERSION_MINOR = build
-PRODUCT_VERSION_MAINTENANCE = 1.2
+PRODUCT_VERSION_MAINTENANCE = 1.00
 
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
